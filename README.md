@@ -32,3 +32,7 @@ $ docker push szabgab/perl:25.10.01
 $ docker push szabgab/perl:latest
 ```
 
+
+## Notes
+
+cpanm --installdeps .
