@@ -4,7 +4,7 @@
 ## Run the container
 
 ```
-docker run -it --rm -w /opt -v$(pwd):/opt --user ubuntu szabgab/perl bash
+docker run -it --rm -v$(pwd):/opt --user ubuntu szabgab/perl bash
 ```
 
 
