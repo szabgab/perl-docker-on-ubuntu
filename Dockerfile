@@ -40,6 +40,17 @@ RUN echo start                                      && \
     apt install -y libtask-kensho-webcrawling-perl  && \
     echo done
 
+# Modules for CPAN::digger
+RUN echo start                                      && \
+    apt install -y libdata-structure-util-perl      && \
+    apt install -y libdatetime-format-iso8601-perl  && \
+    apt install -y libmetacpan-client-perl          && \
+    apt install -y libmock-quick-perl               && \
+    echo PAUSE::Permissions is missing, adding some of its dependencies && \
+    apt install -y libmime-charset-perl             && \
+    apt install -y libtest-trap-perl                && \
+    apt install -y libmoox-options-perl             && \
+    echo done
 
    #apt install -y libdigest-sha3-perl              && \
 #    apt install -y libtask-kensho-webdev-perl       && \
