@@ -53,6 +53,49 @@ RUN echo start                                      && \
     apt install -y libmoox-options-perl             && \
     echo done
 
+# Dist::Zilla plugins
+RUN echo start                                                        && \
+    apt install -y libdist-zilla-plugin-autometaresources-perl        && \
+    apt install -y libdist-zilla-plugin-bootstrap-lib-perl            && \
+    apt install -y libdist-zilla-plugin-bugtracker-perl               && \
+    apt install -y libdist-zilla-plugin-changelogfromgit-perl         && \
+    apt install -y libdist-zilla-plugin-checkbin-perl                 && \
+    apt install -y libdist-zilla-plugin-checkextratests-perl          && \
+    apt install -y libdist-zilla-plugin-config-git-perl               && \
+    apt install -y libdist-zilla-plugin-emailnotify-perl              && \
+    apt install -y libdist-zilla-plugin-git-perl                      && \
+    apt install -y libdist-zilla-plugin-githubmeta-perl               && \
+    apt install -y libdist-zilla-plugin-installguide-perl             && \
+    apt install -y libdist-zilla-plugin-localemsgfmt-perl             && \
+    apt install -y libdist-zilla-plugin-makemaker-awesome-perl        && \
+    apt install -y libdist-zilla-plugin-makemaker-fallback-perl       && \
+    apt install -y libdist-zilla-plugin-metaprovides-package-perl     && \
+    apt install -y libdist-zilla-plugin-metaprovides-perl             && \
+    apt install -y libdist-zilla-plugin-minimumperlfast-perl          && \
+    apt install -y libdist-zilla-plugin-modulebuildtiny-fallback-perl && \
+    apt install -y libdist-zilla-plugin-modulebuildtiny-perl          && \
+    apt install -y libdist-zilla-plugin-mojibaketests-perl            && \
+    apt install -y libdist-zilla-plugin-ourpkgversion-perl            && \
+    apt install -y libdist-zilla-plugin-podspellingtests-perl         && \
+    apt install -y libdist-zilla-plugin-podweaver-perl                && \
+    apt install -y libdist-zilla-plugin-prepender-perl                && \
+    apt install -y libdist-zilla-plugin-readmefrompod-perl            && \
+    apt install -y libdist-zilla-plugin-repository-perl               && \
+    apt install -y libdist-zilla-plugin-requiresexternal-perl         && \
+    apt install -y libdist-zilla-plugin-run-perl                      && \
+    apt install -y libdist-zilla-plugin-signature-perl                && \
+    apt install -y libdist-zilla-plugin-templatefiles-perl            && \
+    apt install -y libdist-zilla-plugin-test-compile-perl             && \
+    apt install -y libdist-zilla-plugin-test-eol-perl                 && \
+    apt install -y libdist-zilla-plugin-test-kwalitee-perl            && \
+    apt install -y libdist-zilla-plugin-test-notabs-perl              && \
+    apt install -y libdist-zilla-plugin-test-perl-critic-perl         && \
+    apt install -y libdist-zilla-plugin-test-podspelling-perl         && \
+    apt install -y libdist-zilla-plugin-test-reportprereqs-perl       && \
+    apt install -y libdist-zilla-plugin-twitter-perl                  && \
+    apt install -y libdist-zilla-plugins-cjm-perl                     && \
+    echo done
+
    #apt install -y libdigest-sha3-perl              && \
 #    apt install -y libtask-kensho-webdev-perl       && \
 #    apt install -y libtask-kensho-hackery-perl      && \
