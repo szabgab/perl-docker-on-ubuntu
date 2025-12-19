@@ -25,15 +25,18 @@ RUN echo start                                      && \
     apt install -y libtask-kensho-oop-perl          && \
     echo done
 
-#    apt install -y libtask-kensho-async-perl        && \
-#    apt install -y libtask-kensho-email-perl        && \
-#    apt install -y libtask-kensho-excelcsv-perl     && \
-#    apt install -y libtask-kensho-exceptions-perl   && \
+RUN echo start                                      && \
+    apt install -y libtask-kensho-async-perl        && \
+    apt install -y libtask-kensho-email-perl        && \
+    apt install -y libtask-kensho-excelcsv-perl     && \
+    apt install -y libtask-kensho-exceptions-perl   && \
+    apt install -y libtask-kensho-moduledev-perl    && \
+    apt install -y libtask-kensho-toolchain-perl    && \
+    echo done
+
 #    apt install -y libtask-kensho-hackery-perl      && \
-#    apt install -y libtask-kensho-moduledev-perl    && \
 #    apt install -y libtask-kensho-perl              && \
 #    apt install -y libtask-kensho-scalability-perl  && \
-#    apt install -y libtask-kensho-toolchain-perl    && \
 #    apt install -y libtask-kensho-webcrawling-perl  && \
 #    apt install -y libtask-kensho-webdev-perl       && \
 #    apt install -y libtask-kensho-xml-perl          && \
