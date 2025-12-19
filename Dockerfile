@@ -11,13 +11,15 @@ RUN apt update                              && \
     apt install -y libtest-pod-perl         && \
     apt install -y libdist-zilla-perl       && \
     apt install -y libmoose-perl            && \
+    echo done
+
 #    apt install -y perltidier               && \
 #    apt install -y perltidy                 && \
 #    apt install -y libtask-kensho-all-perl  && \
-    apt install -y wget                     && \
-    apt clean                               && \
-    rm -rf /var/lib/apt/lists/*             && \
-    echo done
+#    apt install -y wget                     && \
+#    apt clean                               && \
+#    rm -rf /var/lib/apt/lists/*             && \
+#    echo done
 
 COPY bashrc /home/ubuntu/.bashrc
 
