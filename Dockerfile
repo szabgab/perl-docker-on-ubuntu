@@ -46,6 +46,7 @@ RUN echo start                                      && \
     apt install -y libdatetime-format-iso8601-perl  && \
     apt install -y libmetacpan-client-perl          && \
     apt install -y libmock-quick-perl               && \
+    apt install -y libtest-version-perl             && \
     echo PAUSE::Permissions is missing, adding some of its dependencies && \
     apt install -y libmime-charset-perl             && \
     apt install -y libtest-trap-perl                && \
