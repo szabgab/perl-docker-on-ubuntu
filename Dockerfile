@@ -34,12 +34,17 @@ RUN echo start                                      && \
     apt install -y libtask-kensho-toolchain-perl    && \
     echo done
 
+RUN echo start                                      && \
+    apt install -y libtask-kensho-scalability-perl  && \
+    apt install -y libtask-kensho-xml-perl          && \
+    apt install -y libtask-kensho-webcrawling-perl  && \
+    echo done
+
+
+   #apt install -y libdigest-sha3-perl              && \
+#    apt install -y libtask-kensho-webdev-perl       && \
 #    apt install -y libtask-kensho-hackery-perl      && \
 #    apt install -y libtask-kensho-perl              && \
-#    apt install -y libtask-kensho-scalability-perl  && \
-#    apt install -y libtask-kensho-webcrawling-perl  && \
-#    apt install -y libtask-kensho-webdev-perl       && \
-#    apt install -y libtask-kensho-xml-perl          && \
 #
 #    echo done
 
