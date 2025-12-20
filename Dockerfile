@@ -109,5 +109,6 @@ RUN echo start                                                        && \
 #    echo done
 
 COPY bashrc /home/ubuntu/.bashrc
+RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
 
 WORKDIR /opt
