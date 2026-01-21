@@ -1,0 +1,43 @@
+FROM perldocker/perl-tester:5.42
+RUN apt update                              && \
+    apt -y upgrade                          && \
+    apt install -y gpg                      && \
+    echo done
+
+RUN echo start                                      && \
+    cpanm --notest Path::Class::Iterator            && \
+    cpanm Dist::Zilla::PluginBundle::RJBS           && \
+    cpanm Dist::Zilla::PluginBundle::Author::DOMM   && \
+    cpanm Module::Build::Version                    && \
+    cpanm Dist::Zilla::Plugin::Test::CheckChanges   && \
+    cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
+    cpanm Dist::Zilla::Plugin::KwaliteeTests        && \
+    cpanm Dist::Zilla::Plugin::ReportVersions       && \
+    cpanm Dist::Zilla::Plugin::Signature            && \
+    cpanm Dist::Zilla::Plugin::Test::DistManifest   && \
+    cpanm Test::MockTime                            && \
+    cpanm Test::Trap                                && \
+    cpanm Hash::Merge                               && \
+    cpanm MooseX::Storage                           && \
+    cpanm MooseX::Getopt                            && \
+    cpanm MooseX::Storage::Format::JSONpm           && \
+    cpanm MooseX::Types::Path::Class                && \
+    cpanm Path::Class::Iterator                     && \
+    cpanm DateTime::Format::ISO8601                 && \
+    cpanm DateTime::Format::Duration                && \
+    cpanm IO::Capture::Stdout                       && \
+    cpanm Text::Table                               && \
+    echo done
+
+# Path::Class::Iterator seem to fail in docker
+
+# HTTP::CookieJar::LWP, REST::Client, Config::Identity, HTML::TreeBuilder
+
+
+RUN adduser --disabled-password --gecos "" ubuntu
+
+COPY bashrc /home/ubuntu/.bashrc
+RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
+
+WORKDIR /opt
+
