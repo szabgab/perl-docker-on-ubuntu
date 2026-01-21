@@ -96,6 +96,11 @@ RUN echo start                                                        && \
     apt install -y libdist-zilla-plugins-cjm-perl                     && \
     echo done
 
+RUN echo start                                                        && \
+    apt install -y libcommonmark-perl                                 && \
+    apt install -y sudo                                               && \
+    echo done
+
    #apt install -y libdigest-sha3-perl              && \
 #    apt install -y libtask-kensho-webdev-perl       && \
 #    apt install -y libtask-kensho-hackery-perl      && \
@@ -107,6 +112,14 @@ RUN echo start                                                        && \
 #    apt clean                               && \
 #    rm -rf /var/lib/apt/lists/*             && \
 #    echo done
+
+USER ubuntu
+RUN echo start                                      && \
+    cpanm Dist::Zilla::PluginBundle::RJBS           && \
+    echo done
+
+USER root
+
 
 COPY bashrc /home/ubuntu/.bashrc
 RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
