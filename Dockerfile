@@ -116,10 +116,21 @@ RUN echo start                                                        && \
 USER ubuntu
 RUN echo start                                      && \
     cpanm Dist::Zilla::PluginBundle::RJBS           && \
+    cpanm Dist::Zilla::Plugin::CheckChangeLog       && \
+    cpanm Dist::Zilla::Plugin::CopyFilesFromBuild   && \
+    cpanm Dist::Zilla::Plugin::CopyReadmeFromBuild  && \
     echo done
 
 USER root
 
+#    cpanm Dist::Zilla::Plugin::HasVersionTests      && \
+#    cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
+#    cpanm Dist::Zilla::Plugin::KwaliteeTests        && \
+#    cpanm Dist::Zilla::Plugin::ReadmeAnyFromPod     && \
+#    cpanm Dist::Zilla::Plugin::ReportVersions       && \
+#    cpanm Dist::Zilla::Plugin::Test::DistManifest   && \
+#    cpanm Dist::Zilla::Plugin::Test::Portability    && \
+#    cpanm Dist::Zilla::Plugin::Test::Synopsis       && \
 
 COPY bashrc /home/ubuntu/.bashrc
 RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
