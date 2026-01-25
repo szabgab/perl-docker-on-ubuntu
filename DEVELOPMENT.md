@@ -1,5 +1,10 @@
 # Development
 
+## Manuall
+
+docker run -it --rm -v$(pwd):/opt perldocker/perl-tester:5.42  bash
+
+
 ## Build the image
 
 ```
