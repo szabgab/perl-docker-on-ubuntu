@@ -6,12 +6,9 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     cpanm --notest Path::Class::Iterator            && \
-    cpanm Dist::Zilla::PluginBundle::RJBS           && \
     cpanm Dist::Zilla::PluginBundle::Author::DOMM   && \
-    cpanm Module::Build::Version                    && \
     cpanm Dist::Zilla::Plugin::Test::CheckChanges   && \
     cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
-    cpanm Dist::Zilla::Plugin::KwaliteeTests        && \
     cpanm Dist::Zilla::Plugin::ReportVersions       && \
     cpanm Dist::Zilla::Plugin::Signature            && \
     cpanm Dist::Zilla::Plugin::Test::DistManifest   && \
