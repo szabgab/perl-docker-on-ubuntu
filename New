@@ -27,11 +27,17 @@ RUN echo start                                      && \
     cpanm DateTime::Format::Duration                && \
     cpanm IO::Capture::Stdout                       && \
     cpanm Text::Table                               && \
+    cpanm Test::LongString                          && \
+    cpanm MIME::Types                               && \
+    cpanm Mail::Address                             && \
+    cpanm Email::Date::Format                       && \
+    cpanm HTTP::CookieJar::LWP                      && \
+    cpanm REST::Client                              && \
+    cpanm Config::Identity                          && \
+    cpanm HTML::TreeBuilder                         && \
     echo done
 
 # Path::Class::Iterator seem to fail in docker
-
-# HTTP::CookieJar::LWP, REST::Client, Config::Identity, HTML::TreeBuilder
 
 
 RUN adduser --disabled-password --gecos "" ubuntu
