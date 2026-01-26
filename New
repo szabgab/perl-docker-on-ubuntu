@@ -8,11 +8,9 @@ RUN echo start                                      && \
     cpanm --notest Path::Class::Iterator            && \
     cpanm Dist::Zilla::PluginBundle::Author::DOMM   && \
     cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
-    cpanm Dist::Zilla::Plugin::ReportVersions       && \
     cpanm Dist::Zilla::Plugin::Signature            && \
     cpanm Dist::Zilla::Plugin::Test::DistManifest   && \
     cpanm Test::MockTime                            && \
-    cpanm Test::Trap                                && \
     cpanm Hash::Merge                               && \
     cpanm MooseX::Storage                           && \
     cpanm MooseX::Getopt                            && \

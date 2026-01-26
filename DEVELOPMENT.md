@@ -2,8 +2,10 @@
 
 ## Manuall
 
-docker run -it --rm -v$(pwd):/opt perldocker/perl-tester:5.42  bash
-
+```
+docker image rm perldocker/perl-tester:5.42
+docker run -it -w /opt --rm -v$(pwd):/opt perldocker/perl-tester:5.42  bash
+```
 
 ## Build the image
 
