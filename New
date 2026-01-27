@@ -6,10 +6,9 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     cpanm --notest Path::Class::Iterator            && \
-    cpanm Dist::Zilla::PluginBundle::Author::DOMM   && \
     cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
+    cpanm Dist::Zilla::PluginBundle::Author::DOMM   && \
     cpanm Dist::Zilla::Plugin::Signature            && \
-    cpanm Dist::Zilla::Plugin::Test::DistManifest   && \
     cpanm Test::MockTime                            && \
     cpanm Hash::Merge                               && \
     cpanm MooseX::Storage                           && \
@@ -17,11 +16,8 @@ RUN echo start                                      && \
     cpanm MooseX::Storage::Format::JSONpm           && \
     cpanm MooseX::Types::Path::Class                && \
     cpanm Path::Class::Iterator                     && \
-    cpanm DateTime::Format::ISO8601                 && \
-    cpanm DateTime::Format::Duration                && \
     cpanm IO::Capture::Stdout                       && \
     cpanm Text::Table                               && \
-    cpanm Test::LongString                          && \
     cpanm MIME::Types                               && \
     cpanm Mail::Address                             && \
     cpanm Email::Date::Format                       && \
