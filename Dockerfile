@@ -5,14 +5,18 @@ FROM perldocker/perl-tester:5.42
 
 RUN echo start                                      && \
     cpanm Dist::Zilla::Plugin::Homepage             && \
+    cpanm Test::Output                              && \
+    cpanm Dist::Zilla::Plugin::Test::Perl::Critic   && \
+    cpanm Dist::Zilla::Plugin::Test::UnusedVars     && \
+    cpanm Test::Output                              && \
+    cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
+    cpanm Test::MockTime                            && \
+    cpanm Hash::Merge                               && \
+    cpanm MooseX::Storage                           && \
+    cpanm MooseX::Getopt                            && \
     echo done
 
 # cpanm --notest Path::Class::Iterator            && \
-# cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
-# cpanm Test::MockTime                            && \
-# cpanm Hash::Merge                               && \
-# cpanm MooseX::Storage                           && \
-# cpanm MooseX::Getopt                            && \
 # cpanm MooseX::Storage::Format::JSONpm           && \
 # cpanm MooseX::Types::Path::Class                && \
 # cpanm Path::Class::Iterator                     && \
@@ -26,11 +30,7 @@ RUN echo start                                      && \
 # cpanm Config::Identity                          && \
 # cpanm HTML::TreeBuilder                         && \
 
-# Test::Output
-# Dist::Zilla::Plugin::Test::Perl::Critic
 
-# Dist::Zilla::Plugin::Test::UnusedVars
-# Test::Output
 # The dependencies of Task::Test
 # Test::Class ?
 
