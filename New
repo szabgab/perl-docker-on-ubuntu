@@ -1,14 +1,11 @@
 FROM perldocker/perl-tester:5.42
 RUN apt update                              && \
     apt -y upgrade                          && \
-    apt install -y gpg                      && \
     echo done
 
 RUN echo start                                      && \
     cpanm --notest Path::Class::Iterator            && \
     cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
-    cpanm Dist::Zilla::PluginBundle::Author::DOMM   && \
-    cpanm Dist::Zilla::Plugin::Signature            && \
     cpanm Test::MockTime                            && \
     cpanm Hash::Merge                               && \
     cpanm MooseX::Storage                           && \
@@ -26,6 +23,16 @@ RUN echo start                                      && \
     cpanm Config::Identity                          && \
     cpanm HTML::TreeBuilder                         && \
     echo done
+
+# Dist::Zilla::Plugin::Homepage
+# Test::Output
+# Dist::Zilla::Plugin::Test::Perl::Critic
+
+# Dist::Zilla::Plugin::Test::UnusedVars
+# Test::Output
+# The dependencies of Task::Test
+# Test::Class ?
+
 
 # Path::Class::Iterator seem to fail in docker
 
