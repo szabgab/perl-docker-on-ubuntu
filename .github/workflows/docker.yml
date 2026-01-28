@@ -33,8 +33,8 @@ jobs:
 
       - name: Debug
         run:
-          echo tags: ${{ steps.meta.outputs.tags }}
-          echo labels: ${{ steps.meta.outputs.labels }}
+          - echo tags: ${{ steps.meta.outputs.tags }}
+          - echo labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker image
         id: push
