@@ -20,13 +20,13 @@ RUN echo start                                      && \
     cpanm --verbose MooseX::Storage::Format::JSONpm           && \
     cpanm --verbose MooseX::Types::Path::Class                && \
     cpanm --verbose Text::Table                               && \
+    cpanm --verbose MIME::Types                               && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
 
 # Path::Class::Iterator seem to fail in docker
 # cpanm --verbose --notest Path::Class::Iterator            && \
-# cpanm --verbose MIME::Types                               && \
 # cpanm --verbose Mail::Address                             && \
 # cpanm --verbose Email::Date::Format                       && \
 # cpanm --verbose HTTP::CookieJar::LWP                      && \
