@@ -44,6 +44,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::Compile                             && \
     cpanm --verbose WWW::Mechanize                            && \
     cpanm --verbose Test::WWW::Mechanize                      && \
+    cpanm --verbose DBD::Mock                                 && \
     echo done
 
 # Test::XPath
@@ -52,7 +53,6 @@ RUN echo start                                      && \
 # Test::WWW::Mechanize::PSGI
 # Fennec::Declare
 # Devel::NYTProf
-# DBD::Mock
 # WWW::Mechanize::PhantomJS
 # Test::Expect
 # PPI::HTML
