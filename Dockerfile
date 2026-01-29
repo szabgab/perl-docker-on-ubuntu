@@ -43,6 +43,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::File                                && \
     cpanm --verbose Test::Compile                             && \
     cpanm --verbose WWW::Mechanize                            && \
+    cpanm --verbose Test::WWW::Mechanize                      && \
     echo done
 
 # Test::XPath
@@ -69,7 +70,6 @@ RUN echo start                                      && \
 # Net::SSH::Perl
 # Parallel::Iterator
 # Test::HTML::Tidy
-# Test::WWW::Mechanize
 # Expect::Simple
 # TAP::Formatter::HTML
 # Test::Class::Moose
