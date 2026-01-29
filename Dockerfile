@@ -24,13 +24,13 @@ RUN echo start                                      && \
     cpanm --verbose Mail::Address                             && \
     cpanm --verbose Email::Date::Format                       && \
     cpanm --verbose HTTP::CookieJar::LWP                      && \
+    cpanm --verbose REST::Client                              && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
 
 # Path::Class::Iterator seem to fail in docker
 # cpanm --verbose --notest Path::Class::Iterator            && \
-# cpanm --verbose REST::Client                              && \
 # cpanm --verbose Config::Identity                          && \
 # cpanm --verbose HTML::TreeBuilder                         && \
 
