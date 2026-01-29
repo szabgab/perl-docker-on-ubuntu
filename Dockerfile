@@ -39,6 +39,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::HTML::Lint                          && \
     cpanm --verbose Test::Mock::Simple                        && \
     cpanm --verbose DBI                                       && \
+    cpanm --verbose Test::DatabaseRow
     echo done
 
 # Test::XPath
@@ -61,7 +62,6 @@ RUN echo start                                      && \
 # Data::Random
 # Browser::Open
 # Template
-# Test::DatabaseRow
 # Test::Snapshots
 # Net::Server
 # Net::SSH::Perl
