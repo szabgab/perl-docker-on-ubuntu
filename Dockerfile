@@ -36,6 +36,7 @@ RUN echo start                                      && \
     cpanm --verbose Log::Log4perl                             && \
     cpanm --verbose Archive::Tar::Wrapper                     && \
     cpanm --verbose Test::HTML::Lint                          && \
+    cpanm --verbose Test::Mock::Simple                        && \
     echo done
 
 # Test::XPath
@@ -67,7 +68,6 @@ RUN echo start                                      && \
 # Test::HTML::Tidy
 # Test::WWW::Mechanize
 # Expect::Simple
-# Test::Mock::Simple
 # TAP::Formatter::HTML
 # Test::Class::Moose
 # Smolder
