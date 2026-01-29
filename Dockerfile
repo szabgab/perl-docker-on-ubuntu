@@ -37,6 +37,7 @@ RUN echo start                                      && \
     cpanm --verbose Archive::Tar::Wrapper                     && \
     cpanm --verbose Test::HTML::Lint                          && \
     cpanm --verbose Test::Mock::Simple                        && \
+    cpanm --verbose DBI                                       && \
     echo done
 
 # Test::XPath
