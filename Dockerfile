@@ -41,6 +41,7 @@ RUN echo start                                      && \
     cpanm --verbose DBI                                       && \
     cpanm --verbose Test::DatabaseRow                         && \
     cpanm --verbose Test::File                                && \
+    cpanm --verbose Test::Compile                             && \
     echo done
 
 # Test::XPath
@@ -65,7 +66,6 @@ RUN echo start                                      && \
 # Test::Snapshots
 # Net::Server
 # Net::SSH::Perl
-# Test::Compile
 # Parallel::Iterator
 # Test::HTML::Tidy
 # Test::WWW::Mechanize
