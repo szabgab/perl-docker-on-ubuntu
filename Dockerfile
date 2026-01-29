@@ -31,12 +31,12 @@ RUN echo start                                      && \
     cpanm --verbose Config::Identity                          && \
     cpanm --verbose HTML::TreeBuilder                         && \
     cpanm --verbose Test::Taint                               && \
+    cpanm --verbose Test::Strict                              && \
     echo done
 
 # X11::GUITest
 # HTTP::Daemon
 # Test::WWW::Mechanize::PSGI
-# Test::Strict
 # Fennec::Declare
 # Devel::NYTProf
 # DBD::Mock
