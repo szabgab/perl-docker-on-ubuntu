@@ -22,13 +22,13 @@ RUN echo start                                      && \
     cpanm --verbose Text::Table                               && \
     cpanm --verbose MIME::Types                               && \
     cpanm --verbose Mail::Address                             && \
+    cpanm --verbose Email::Date::Format                       && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
 
 # Path::Class::Iterator seem to fail in docker
 # cpanm --verbose --notest Path::Class::Iterator            && \
-# cpanm --verbose Email::Date::Format                       && \
 # cpanm --verbose HTTP::CookieJar::LWP                      && \
 # cpanm --verbose REST::Client                              && \
 # cpanm --verbose Config::Identity                          && \
