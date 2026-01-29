@@ -29,13 +29,13 @@ RUN echo start                                      && \
     cpanm --verbose HTTP::CookieJar::LWP                      && \
     cpanm --verbose REST::Client                              && \
     cpanm --verbose Config::Identity                          && \
+    cpanm --verbose HTML::TreeBuilder                         && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
 
 # Path::Class::Iterator seem to fail in docker
 # cpanm --verbose --notest Path::Class::Iterator            && \
-# cpanm --verbose HTML::TreeBuilder                         && \
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
