@@ -14,10 +14,10 @@ RUN echo start                                      && \
     cpanm --verbose Test::Distribution                        && \
     cpanm --verbose Test::Script                              && \
     cpanm --verbose Hash::Merge                               && \
+    cpanm --verbose MooseX::Storage                           && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
-#    cpanm --verbose MooseX::Storage                           && \
 #    cpanm --verbose MooseX::Getopt                            && \
 
 # Path::Class::Iterator seem to fail in docker
