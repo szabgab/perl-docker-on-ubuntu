@@ -16,6 +16,7 @@ RUN echo start                                      && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
     cpanm --verbose MooseX::Getopt                            && \
+    cpanm --verbose IO::Capture::Stdout                       && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
@@ -24,7 +25,6 @@ RUN echo start                                      && \
 # cpanm --verbose --notest Path::Class::Iterator            && \
 # cpanm --verbose MooseX::Storage::Format::JSONpm           && \
 # cpanm --verbose MooseX::Types::Path::Class                && \
-# cpanm --verbose IO::Capture::Stdout                       && \
 # cpanm --verbose Text::Table                               && \
 # cpanm --verbose MIME::Types                               && \
 # cpanm --verbose Mail::Address                             && \
