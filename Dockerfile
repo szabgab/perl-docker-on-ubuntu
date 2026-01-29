@@ -34,9 +34,9 @@ RUN echo start                                      && \
     cpanm --verbose Test::Strict                              && \
     cpanm --verbose Test::FailWarnings                        && \
     cpanm --verbose Log::Log4perl                             && \
+    cpanm --verbose Archive::Tar::Wrapper                     && \
     echo done
 
-# Archive::Tar::Wrapper
 # Test::XPath
 # X11::GUITest
 # HTTP::Daemon
