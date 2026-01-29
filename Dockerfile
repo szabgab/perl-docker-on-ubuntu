@@ -15,10 +15,10 @@ RUN echo start                                      && \
     cpanm --verbose Test::Script                              && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
+    cpanm --verbose MooseX::Getopt                            && \
     echo done
 
 #    cpanm --verbose Task::Test                                && \
-#    cpanm --verbose MooseX::Getopt                            && \
 
 # Path::Class::Iterator seem to fail in docker
 # cpanm --verbose --notest Path::Class::Iterator            && \
