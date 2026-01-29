@@ -39,7 +39,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::HTML::Lint                          && \
     cpanm --verbose Test::Mock::Simple                        && \
     cpanm --verbose DBI                                       && \
-    cpanm --verbose Test::DatabaseRow
+    cpanm --verbose Test::DatabaseRow                         && \
     echo done
 
 # Test::XPath
