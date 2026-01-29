@@ -42,6 +42,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::DatabaseRow                         && \
     cpanm --verbose Test::File                                && \
     cpanm --verbose Test::Compile                             && \
+    cpanm --verbose WWW::Mechanize                            && \
     echo done
 
 # Test::XPath
