@@ -40,6 +40,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::Mock::Simple                        && \
     cpanm --verbose DBI                                       && \
     cpanm --verbose Test::DatabaseRow                         && \
+    cpanm --verbose Test::File                                && \
     echo done
 
 # Test::XPath
@@ -50,7 +51,6 @@ RUN echo start                                      && \
 # Devel::NYTProf
 # DBD::Mock
 # WWW::Mechanize::PhantomJS
-# Test::File
 # Test::Expect
 # PPI::HTML
 # Test::Inline
