@@ -2,6 +2,7 @@ FROM perldocker/perl-tester:5.42
 RUN apt update                              && \
     apt -y upgrade                          && \
     apt install -y gpg-agent                && \
+    apt install -y vim                      && \
     echo done
 
 # gpg-agent seems to be required by Config::Identity
