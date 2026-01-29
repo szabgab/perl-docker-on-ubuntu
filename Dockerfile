@@ -32,6 +32,7 @@ RUN echo start                                      && \
     cpanm --verbose HTML::TreeBuilder                         && \
     cpanm --verbose Test::Taint                               && \
     cpanm --verbose Test::Strict                              && \
+    cpanm --verbose Test::FailWarnings                        && \
     echo done
 
 # X11::GUITest
@@ -44,7 +45,6 @@ RUN echo start                                      && \
 # Test::File
 # Test::Expect
 # Test::HTML::Lint
-# Test::FailWarnings
 # PPI::HTML
 # Test::Inline
 # HTML::Lint
