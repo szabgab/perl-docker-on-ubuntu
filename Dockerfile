@@ -4,22 +4,25 @@ FROM perldocker/perl-tester:5.42
 #    echo done
 
 RUN echo start                                      && \
-    cpanm Dist::Zilla::Plugin::Homepage             && \
-    cpanm Test::Output                              && \
-    cpanm Dist::Zilla::Plugin::Test::Perl::Critic   && \
     cpanm Dist::Zilla::Plugin::Test::UnusedVars     && \
-    cpanm Test::Output                              && \
+    cpanm Test::MockObject                          && \
+    cpanm Dist::Zilla::Plugin::Bugtracker           && \
     cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
     cpanm Test::MockTime                            && \
+    cpanm Test::Class                               && \
+    cpanm Test::Memory::Cycle                       && \
+    cpanm Test::Distribution                        && \
+    cpanm Test::Script                              && \
+    cpanm Task::Test                                && \
     cpanm Hash::Merge                               && \
     cpanm MooseX::Storage                           && \
     cpanm MooseX::Getopt                            && \
     echo done
 
+# Path::Class::Iterator seem to fail in docker
 # cpanm --notest Path::Class::Iterator            && \
 # cpanm MooseX::Storage::Format::JSONpm           && \
 # cpanm MooseX::Types::Path::Class                && \
-# cpanm Path::Class::Iterator                     && \
 # cpanm IO::Capture::Stdout                       && \
 # cpanm Text::Table                               && \
 # cpanm MIME::Types                               && \
@@ -29,14 +32,6 @@ RUN echo start                                      && \
 # cpanm REST::Client                              && \
 # cpanm Config::Identity                          && \
 # cpanm HTML::TreeBuilder                         && \
-
-
-# The dependencies of Task::Test
-# Test::Class ?
-
-
-# Path::Class::Iterator seem to fail in docker
-
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
