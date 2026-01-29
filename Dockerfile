@@ -4,34 +4,35 @@ FROM perldocker/perl-tester:5.42
 #    echo done
 
 RUN echo start                                      && \
-    cpanm Dist::Zilla::Plugin::Test::UnusedVars     && \
-    cpanm Test::MockObject                          && \
-    cpanm Dist::Zilla::Plugin::Bugtracker           && \
-    cpanm Dist::Zilla::Plugin::InlineFilesMARCEL    && \
-    cpanm Test::MockTime                            && \
-    cpanm Test::Class                               && \
-    cpanm Test::Memory::Cycle                       && \
-    cpanm Test::Distribution                        && \
-    cpanm Test::Script                              && \
-    cpanm Task::Test                                && \
-    cpanm Hash::Merge                               && \
-    cpanm MooseX::Storage                           && \
-    cpanm MooseX::Getopt                            && \
+    cpanm --verbose Dist::Zilla::Plugin::Test::UnusedVars     && \
+    cpanm --verbose Test::MockObject                          && \
+    cpanm --verbose Dist::Zilla::Plugin::Bugtracker           && \
+    cpanm --verbose Dist::Zilla::Plugin::InlineFilesMARCEL    && \
+    cpanm --verbose Test::MockTime                            && \
+    cpanm --verbose Test::Class                               && \
+    cpanm --verbose Test::Memory::Cycle                       && \
+    cpanm --verbose Test::Distribution                        && \
+    cpanm --verbose Test::Script                              && \
+    cpanm --verbose Hash::Merge                               && \
     echo done
 
+#    cpanm --verbose Task::Test                                && \
+#    cpanm --verbose MooseX::Storage                           && \
+#    cpanm --verbose MooseX::Getopt                            && \
+
 # Path::Class::Iterator seem to fail in docker
-# cpanm --notest Path::Class::Iterator            && \
-# cpanm MooseX::Storage::Format::JSONpm           && \
-# cpanm MooseX::Types::Path::Class                && \
-# cpanm IO::Capture::Stdout                       && \
-# cpanm Text::Table                               && \
-# cpanm MIME::Types                               && \
-# cpanm Mail::Address                             && \
-# cpanm Email::Date::Format                       && \
-# cpanm HTTP::CookieJar::LWP                      && \
-# cpanm REST::Client                              && \
-# cpanm Config::Identity                          && \
-# cpanm HTML::TreeBuilder                         && \
+# cpanm --verbose --notest Path::Class::Iterator            && \
+# cpanm --verbose MooseX::Storage::Format::JSONpm           && \
+# cpanm --verbose MooseX::Types::Path::Class                && \
+# cpanm --verbose IO::Capture::Stdout                       && \
+# cpanm --verbose Text::Table                               && \
+# cpanm --verbose MIME::Types                               && \
+# cpanm --verbose Mail::Address                             && \
+# cpanm --verbose Email::Date::Format                       && \
+# cpanm --verbose HTTP::CookieJar::LWP                      && \
+# cpanm --verbose REST::Client                              && \
+# cpanm --verbose Config::Identity                          && \
+# cpanm --verbose HTML::TreeBuilder                         && \
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
