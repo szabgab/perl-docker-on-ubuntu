@@ -30,10 +30,10 @@ RUN echo start                                      && \
     cpanm --verbose REST::Client                              && \
     cpanm --verbose Config::Identity                          && \
     cpanm --verbose HTML::TreeBuilder                         && \
+    cpanm --verbose Test::Taint                               && \
     echo done
 
 # X11::GUITest
-# Test::Taint
 # HTTP::Daemon
 # Test::WWW::Mechanize::PSGI
 # Test::Strict
