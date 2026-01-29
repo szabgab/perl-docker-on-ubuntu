@@ -35,6 +35,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::FailWarnings                        && \
     cpanm --verbose Log::Log4perl                             && \
     cpanm --verbose Archive::Tar::Wrapper                     && \
+    cpanm --verbose Test::HTML::Lint                          && \
     echo done
 
 # Test::XPath
@@ -47,7 +48,6 @@ RUN echo start                                      && \
 # WWW::Mechanize::PhantomJS
 # Test::File
 # Test::Expect
-# Test::HTML::Lint
 # PPI::HTML
 # Test::Inline
 # HTML::Lint
