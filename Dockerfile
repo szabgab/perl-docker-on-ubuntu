@@ -32,6 +32,47 @@ RUN echo start                                      && \
     cpanm --verbose HTML::TreeBuilder                         && \
     echo done
 
+# X11::GUITest
+# Test::Taint
+# HTTP::Daemon
+# Test::WWW::Mechanize::PSGI
+# Test::Strict
+# Fennec::Declare
+# Devel::NYTProf
+# DBD::Mock
+# WWW::Mechanize::PhantomJS
+# Test::File
+# Test::Expect
+# Test::HTML::Lint
+# Test::FailWarnings
+# PPI::HTML
+# Test::Inline
+# HTML::Lint
+# Expect
+# Fennec
+# Net::Telnet
+# Selenium::Remote::Driver
+# Data::Random
+# Browser::Open
+# Template
+# Test::XPath
+# Test::DatabaseRow
+# Test::Snapshots
+# Net::Server
+# Net::SSH::Perl
+# Test::Compile
+# Parallel::Iterator
+# Test::HTML::Tidy
+# Test::WWW::Mechanize
+# Expect::Simple
+# Test::Mock::Simple
+# TAP::Formatter::HTML
+# Test::Class::Moose
+# Smolder
+# WWW::Mechanize::Firefox
+# HTML::Tidy
+# HTTP::Proxy
+# Net::SSH
 #    cpanm --verbose Task::Test                                && \
 
 # Path::Class::Iterator seem to fail in docker
