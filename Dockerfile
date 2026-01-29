@@ -33,8 +33,11 @@ RUN echo start                                      && \
     cpanm --verbose Test::Taint                               && \
     cpanm --verbose Test::Strict                              && \
     cpanm --verbose Test::FailWarnings                        && \
+    cpanm --verbose Log::Log4perl                             && \
     echo done
 
+# Archive::Tar::Wrapper
+# Test::XPath
 # X11::GUITest
 # HTTP::Daemon
 # Test::WWW::Mechanize::PSGI
@@ -55,7 +58,6 @@ RUN echo start                                      && \
 # Data::Random
 # Browser::Open
 # Template
-# Test::XPath
 # Test::DatabaseRow
 # Test::Snapshots
 # Net::Server
