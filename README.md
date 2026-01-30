@@ -1,5 +1,6 @@
 # Ubuntu Perl with lots of libraries
 
+Based on the [perl-tester](https://github.com/Perl/docker-perl-tester/) Docker image.
 
 ## Run the container
 
