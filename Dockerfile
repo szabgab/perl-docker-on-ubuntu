@@ -47,6 +47,7 @@ RUN echo start                                      && \
     cpanm --verbose DBD::Mock                                 && \
     cpanm --verbose Devel::NYTProf                            && \
     cpanm --verbose Test::WWW::Mechanize::PSGI                && \
+    cpanm --verbose Perl::Critic::Bangs                       && \
     echo done
 
 # Test::XPath
@@ -69,13 +70,13 @@ RUN echo start                                      && \
 # Net::Server
 # Net::SSH::Perl
 # Parallel::Iterator
-# Test::HTML::Tidy
 # Expect::Simple
 # TAP::Formatter::HTML
 # Test::Class::Moose
 # Smolder
 # WWW::Mechanize::Firefox
 # HTML::Tidy
+# Test::HTML::Tidy
 # HTTP::Proxy
 # Net::SSH
 #    cpanm --verbose Task::Test                                && \
