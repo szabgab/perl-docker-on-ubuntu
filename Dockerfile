@@ -51,8 +51,10 @@ RUN echo start                                      && \
     cpanm --verbose Test::LeakTrace                           && \
     cpanm --verbose AppConfig                                 && \
     cpanm --verbose Template                                  && \
+    cpanm --verbose DateTime::Format::SQLite                  && \
     echo done
 
+# MooX::Types::MooseLike::Base
 
 # Test::XPath
 # X11::GUITest
