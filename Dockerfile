@@ -48,7 +48,11 @@ RUN echo start                                      && \
     cpanm --verbose Devel::NYTProf                            && \
     cpanm --verbose Test::WWW::Mechanize::PSGI                && \
     cpanm --verbose Perl::Critic::Bangs                       && \
+    cpanm --verbose Test::LeakTrace                           && \
+    cpanm --verbose AppConfig                                 && \
+    cpanm --verbose Template                                  && \
     echo done
+
 
 # Test::XPath
 # X11::GUITest
@@ -65,7 +69,6 @@ RUN echo start                                      && \
 # Selenium::Remote::Driver
 # Data::Random
 # Browser::Open
-# Template
 # Test::Snapshots
 # Net::Server
 # Net::SSH::Perl
