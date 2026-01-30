@@ -46,12 +46,12 @@ RUN echo start                                      && \
     cpanm --verbose Test::WWW::Mechanize                      && \
     cpanm --verbose DBD::Mock                                 && \
     cpanm --verbose Devel::NYTProf                            && \
+    cpanm --verbose Test::WWW::Mechanize::PSGI                && \
     echo done
 
 # Test::XPath
 # X11::GUITest
 # HTTP::Daemon
-# Test::WWW::Mechanize::PSGI
 # Fennec::Declare
 # WWW::Mechanize::PhantomJS
 # Test::Expect
