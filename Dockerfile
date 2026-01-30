@@ -52,9 +52,9 @@ RUN echo start                                      && \
     cpanm --verbose AppConfig                                 && \
     cpanm --verbose Template                                  && \
     cpanm --verbose DateTime::Format::SQLite                  && \
+    cpanm --verbose MooX::Types::MooseLike::Base              && \
     echo done
 
-# MooX::Types::MooseLike::Base
 
 # Test::XPath
 # X11::GUITest
