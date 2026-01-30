@@ -53,7 +53,11 @@ RUN echo start                                      && \
     cpanm --verbose Template                                  && \
     cpanm --verbose DateTime::Format::SQLite                  && \
     cpanm --verbose MooX::Types::MooseLike::Base              && \
+    cpanm --verbose Data::Random                              && \
+    cpanm --verbose Test::ClassAPI                            && \
+    cpanm --verbose Test::Inline                              && \
     echo done
+
 
 
 # Test::XPath
@@ -63,13 +67,11 @@ RUN echo start                                      && \
 # WWW::Mechanize::PhantomJS
 # Test::Expect
 # PPI::HTML
-# Test::Inline
 # HTML::Lint
 # Expect
 # Fennec
 # Net::Telnet
 # Selenium::Remote::Driver
-# Data::Random
 # Browser::Open
 # Test::Snapshots
 # Net::Server
