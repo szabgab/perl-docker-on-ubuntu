@@ -69,7 +69,6 @@ RUN echo start                                      && \
 # Fennec
 # Net::Telnet
 # Selenium::Remote::Driver
-# Browser::Open
 # Test::Snapshots
 # Net::Server
 # Net::SSH::Perl
@@ -77,13 +76,13 @@ RUN echo start                                      && \
 # Expect::Simple
 # TAP::Formatter::HTML
 # Test::Class::Moose
-# Smolder
 # WWW::Mechanize::Firefox
 # HTML::Tidy
 # Test::HTML::Tidy
 # HTTP::Proxy
 # Net::SSH
-#    cpanm --verbose Task::Test                                && \
+
+# Test2
 
 # Path::Class::Iterator seem to fail in docker
 # cpanm --verbose --notest Path::Class::Iterator            && \
