@@ -50,8 +50,17 @@ RUN echo start                                      && \
     cpanm --verbose Data::Random                              && \
     cpanm --verbose Test::ClassAPI                            && \
     cpanm --verbose Test::Inline                              && \
+    cpanm --verbose CHI                                       && \
+    cpanm --verbose DBIx::Class                               && \
+    cpanm --verbose DBIx::Class::InflateColumn::Serializer    && \
+    cpanm --verbose Data::Page                                && \
+    cpanm --verbose Future                                    && \
+    cpanm --verbose Future::AsyncAwait                        && \
+    cpanm --verbose IO::Async::Function                       && \
+    cpanm --verbose IO::Async::Loop                           && \
+    cpanm --verbose Metrics::Any                              && \
+    cpanm --verbose SQL::Translator                           && \
     echo done
-
 
 
 # Test::XPath
