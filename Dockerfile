@@ -8,9 +8,6 @@ RUN apt update                              && \
 # gpg-agent seems to be required by Config::Identity
 
 RUN echo start                                      && \
-    cpanm --verbose Dist::Zilla::Plugin::Bugtracker           && \
-    cpanm --verbose Dist::Zilla::Plugin::InlineFilesMARCEL    && \
-    cpanm --verbose Test::MockTime                            && \
     cpanm --verbose Test::Memory::Cycle                       && \
     cpanm --verbose Test::Distribution                        && \
     cpanm --verbose Test::Script                              && \
