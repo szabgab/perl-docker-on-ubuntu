@@ -60,7 +60,20 @@ RUN echo start                                      && \
     cpanm --verbose IO::Async::Loop                           && \
     cpanm --verbose Metrics::Any                              && \
     cpanm --verbose SQL::Translator                           && \
+    cpanm --verbose PkgConfig                                 && \
     echo done
+
+# Installing PkgConfig generates lots of warnings:
+# Ignoring unknown extended header keyword
+# https://github.com/PerlPkgConfig/perl-PkgConfig/issues/67
+# To supress these warnigs one coulde set:
+# export TAR_OPTIONS='--warning=no-unknown-keyword'
+
+#    cpanm --verbose FFI::CheckLib                             && \
+#    cpanm --verbose Alien::Base::Wrapper                      && \
+# XML::LibXML
+# Alien::Libxml2
+# Alien::Build
 
 
 # Test::XPath
