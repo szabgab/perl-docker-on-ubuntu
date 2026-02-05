@@ -60,8 +60,13 @@ RUN echo start                                      && \
     cpanm --verbose IO::Async::Loop                           && \
     cpanm --verbose Metrics::Any                              && \
     cpanm --verbose SQL::Translator                           && \
+    cpanm --verbose Data::Structure::Util                     && \
+    cpanm --verbose MetaCPAN::Client                          && \
+    cpanm --verbose Mock::Quick                               && \
+    cpanm --verbose PAUSE::Permissions                        && \
     cpanm --verbose PkgConfig                                 && \
     echo done
+
 
 # Installing PkgConfig generates lots of warnings:
 # Ignoring unknown extended header keyword
