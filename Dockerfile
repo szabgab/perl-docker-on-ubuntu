@@ -4,6 +4,7 @@ RUN apt update                              && \
     apt install -y gpg-agent                && \
     apt install -y vim                      && \
     apt install -y tree                     && \
+    apt install -y libxml2-dev              && \
     echo done
 
 # gpg-agent seems to be required by Config::Identity
@@ -68,6 +69,8 @@ RUN echo start                                      && \
     cpanm --verbose PkgConfig                                 && \
     cpanm --verbose FFI::CheckLib                             && \
     cpanm --verbose Alien::Base::Wrapper                      && \
+    cpanm --verbose Alien::Build::Plugin::Download::GitLab    && \
+    cpanm --verbose Alien::Libxml2                            && \
     echo done
 
 
@@ -77,9 +80,8 @@ RUN echo start                                      && \
 # To supress these warnigs one coulde set:
 # export TAR_OPTIONS='--warning=no-unknown-keyword'
 
+# We install libxml2-dev so when installing Alien::Libxml2 it won't need to compile.
 # XML::LibXML
-# Alien::Libxml2
-# Alien::Build
 
 
 # Test::XPath
