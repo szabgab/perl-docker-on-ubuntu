@@ -3,6 +3,7 @@ RUN apt update                              && \
     apt -y upgrade                          && \
     apt install -y gpg-agent                && \
     apt install -y vim                      && \
+    apt install -y tree                     && \
     echo done
 
 # gpg-agent seems to be required by Config::Identity
@@ -65,6 +66,8 @@ RUN echo start                                      && \
     cpanm --verbose Mock::Quick                               && \
     cpanm --verbose PAUSE::Permissions                        && \
     cpanm --verbose PkgConfig                                 && \
+    cpanm --verbose FFI::CheckLib                             && \
+    cpanm --verbose Alien::Base::Wrapper                      && \
     echo done
 
 
@@ -74,8 +77,6 @@ RUN echo start                                      && \
 # To supress these warnigs one coulde set:
 # export TAR_OPTIONS='--warning=no-unknown-keyword'
 
-#    cpanm --verbose FFI::CheckLib                             && \
-#    cpanm --verbose Alien::Base::Wrapper                      && \
 # XML::LibXML
 # Alien::Libxml2
 # Alien::Build
