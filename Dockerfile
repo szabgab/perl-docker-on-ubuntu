@@ -13,6 +13,12 @@ RUN echo start                                      && \
     cpanm --verbose Test::Memory::Cycle                       && \
     cpanm --verbose Test::Distribution                        && \
     cpanm --verbose Test::Script                              && \
+    cpanm --verbose Test::Taint                               && \
+    cpanm --verbose Test::Strict                              && \
+    cpanm --verbose Test::FailWarnings                        && \
+    cpanm --verbose Test::HTML::Lint                          && \
+    cpanm --verbose Test::Mock::Simple                        && \
+    cpanm --verbose Test::File                                && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
     cpanm --verbose MooseX::Getopt                            && \
@@ -27,16 +33,10 @@ RUN echo start                                      && \
     cpanm --verbose REST::Client                              && \
     cpanm --verbose Config::Identity                          && \
     cpanm --verbose HTML::TreeBuilder                         && \
-    cpanm --verbose Test::Taint                               && \
-    cpanm --verbose Test::Strict                              && \
-    cpanm --verbose Test::FailWarnings                        && \
     cpanm --verbose Log::Log4perl                             && \
     cpanm --verbose Archive::Tar::Wrapper                     && \
-    cpanm --verbose Test::HTML::Lint                          && \
-    cpanm --verbose Test::Mock::Simple                        && \
     cpanm --verbose DBI                                       && \
     cpanm --verbose Test::DatabaseRow                         && \
-    cpanm --verbose Test::File                                && \
     cpanm --verbose Test::Compile                             && \
     cpanm --verbose WWW::Mechanize                            && \
     cpanm --verbose Test::WWW::Mechanize                      && \
