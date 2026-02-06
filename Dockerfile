@@ -10,9 +10,6 @@ RUN apt update                              && \
 # gpg-agent seems to be required by Config::Identity
 
 RUN echo start                                      && \
-    cpanm --verbose Test::Memory::Cycle                       && \
-    cpanm --verbose Test::Distribution                        && \
-    cpanm --verbose Test::Script                              && \
     cpanm --verbose Test::Taint                               && \
     cpanm --verbose Test::Strict                              && \
     cpanm --verbose Test::FailWarnings                        && \
