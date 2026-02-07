@@ -4,6 +4,7 @@ RUN apt update                              && \
     apt install -y gpg-agent                && \
     apt install -y vim                      && \
     apt install -y tree                     && \
+    apt install -y less                     && \
     apt install -y libxml2-dev              && \
     echo done
 
@@ -60,7 +61,18 @@ RUN echo start                                      && \
     cpanm --verbose Alien::Base::Wrapper                      && \
     cpanm --verbose Alien::Build::Plugin::Download::GitLab    && \
     cpanm --verbose Alien::Libxml2                            && \
+    echo Dancer                                               && \
+    cpanm --verbose Data::Censor                              && \
+    cpanm --verbose Template::Tiny                            && \
+    cpanm --verbose File::Share                               && \
+    cpanm --verbose Test::Lib                                 && \
+    cpanm --verbose CLI::Osprey                               && \
+    cpanm --verbose Plack::Middleware::RemoveRedundantBody      && \
+    cpanm --verbose Plack::Middleware::FixMissingBodyInRedirect && \
+    cpanm --verbose Dancer2                                     && \
     echo done
+
+
 
 
 # Installing PkgConfig generates lots of warnings:
@@ -71,7 +83,6 @@ RUN echo start                                      && \
 
 # We install libxml2-dev so when installing Alien::Libxml2 it won't need to compile.
 # XML::LibXML
-
 
 # Test::XPath
 # X11::GUITest
