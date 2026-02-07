@@ -10,6 +10,10 @@ RUN apt update                              && \
 # gpg-agent seems to be required by Config::Identity
 
 RUN echo start                                      && \
+    cpanm --verbose Perl::Critic::Bangs                       && \
+    cpanm --verbose HTML::TreeBuilder                         && \
+    cpanm --verbose WWW::Mechanize                            && \
+    cpanm --verbose Test::WWW::Mechanize                      && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
     cpanm --verbose MooseX::Getopt                            && \
@@ -26,12 +30,9 @@ RUN echo start                                      && \
     cpanm --verbose HTML::TreeBuilder                         && \
     cpanm --verbose Log::Log4perl                             && \
     cpanm --verbose Archive::Tar::Wrapper                     && \
-    cpanm --verbose WWW::Mechanize                            && \
-    cpanm --verbose Test::WWW::Mechanize                      && \
     cpanm --verbose DBD::Mock                                 && \
     cpanm --verbose Devel::NYTProf                            && \
     cpanm --verbose Test::WWW::Mechanize::PSGI                && \
-    cpanm --verbose Perl::Critic::Bangs                       && \
     cpanm --verbose Test::LeakTrace                           && \
     cpanm --verbose AppConfig                                 && \
     cpanm --verbose Template                                  && \
@@ -74,7 +75,6 @@ RUN echo start                                      && \
 
 # Test::XPath
 # X11::GUITest
-# HTTP::Daemon
 # Fennec::Declare
 # WWW::Mechanize::PhantomJS
 # Test::Expect
