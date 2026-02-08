@@ -14,7 +14,15 @@ RUN echo start                                      && \
     cpanm --verbose HTTP::Server::Simple                      && \
     cpanm --verbose Carp::Assert::More                        && \
     cpanm --verbose Test::WWW::Mechanize                      && \
-    echo next                                                 && \
+    echo next: Dancer                                         && \
+    cpanm --verbose Data::Censor                              && \
+    cpanm --verbose Template::Tiny                            && \
+    cpanm --verbose File::Share                               && \
+    cpanm --verbose Test::Lib                                 && \
+    cpanm --verbose CLI::Osprey                               && \
+    cpanm --verbose Plack::Middleware::RemoveRedundantBody      && \
+    cpanm --verbose Plack::Middleware::FixMissingBodyInRedirect && \
+    cpanm --verbose Dancer2                                     && \
     echo maybe                                                && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
@@ -62,15 +70,6 @@ RUN echo start                                      && \
     cpanm --verbose Alien::Base::Wrapper                      && \
     cpanm --verbose Alien::Build::Plugin::Download::GitLab    && \
     cpanm --verbose Alien::Libxml2                            && \
-    echo Dancer                                               && \
-    cpanm --verbose Data::Censor                              && \
-    cpanm --verbose Template::Tiny                            && \
-    cpanm --verbose File::Share                               && \
-    cpanm --verbose Test::Lib                                 && \
-    cpanm --verbose CLI::Osprey                               && \
-    cpanm --verbose Plack::Middleware::RemoveRedundantBody      && \
-    cpanm --verbose Plack::Middleware::FixMissingBodyInRedirect && \
-    cpanm --verbose Dancer2                                     && \
     echo done
 
 
