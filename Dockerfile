@@ -11,13 +11,10 @@ RUN apt update                              && \
 # gpg-agent seems to be required by Config::Identity
 
 RUN echo start                                      && \
-    cpanm --verbose HTML::TreeBuilder                         && \
-    cpanm --verbose WWW::Mechanize                            && \
-    cpanm --verbose CGI                                       && \
-    echo next                                                 && \
     cpanm --verbose HTTP::Server::Simple                      && \
     cpanm --verbose Carp::Assert::More                        && \
     cpanm --verbose Test::WWW::Mechanize                      && \
+    echo next                                                 && \
     echo maybe                                                && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
