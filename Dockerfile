@@ -11,9 +11,6 @@ RUN apt update                              && \
 # gpg-agent seems to be required by Config::Identity
 
 RUN echo start                                      && \
-    cpanm --verbose HTTP::Server::Simple                      && \
-    cpanm --verbose Carp::Assert::More                        && \
-    cpanm --verbose Test::WWW::Mechanize                      && \
     echo next: Dancer                                         && \
     cpanm --verbose Data::Censor                              && \
     cpanm --verbose Template::Tiny                            && \
@@ -71,8 +68,6 @@ RUN echo start                                      && \
     cpanm --verbose Alien::Build::Plugin::Download::GitLab    && \
     cpanm --verbose Alien::Libxml2                            && \
     echo done
-
-
 
 
 # Installing PkgConfig generates lots of warnings:
