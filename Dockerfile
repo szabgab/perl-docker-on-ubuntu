@@ -11,7 +11,36 @@ RUN apt update                              && \
 # gpg-agent seems to be required by Config::Identity
 
 RUN echo start                                      && \
-    echo next: Dancer                                         && \
+    echo added                                                && \
+    cpanm --verbose Data::Compare                             && \
+    cpanm --verbose Devel::CheckOS                            && \
+    cpanm --verbose Dist::Zilla::Plugin::AssertOS             && \
+    echo next                                                 && \
+    cpanm --verbose Dist::Zilla::Plugin::InstallRelease       && \
+    cpanm --verbose Dist::Zilla::Plugin::SchwartzRatio        && \
+    cpanm --verbose RDF::DOAP::Lite                           && \
+    cpanm --verbose Dist::Zilla::Plugin::DOAP                 && \
+    cpanm --verbose Perl::Version                             && \
+    cpanm --verbose System::Command                           && \
+    cpanm --verbose Test::NoWarnings                          && \
+    cpanm --verbose Git::Version::Compare                     && \
+    cpanm --verbose Test::Requires::Git                       && \
+    cpanm --verbose Git::Repository                           && \
+    echo next                                                 && \
+    cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
+    cpanm --verbose Dist::Zilla::Plugin::VerifyPhases                   && \
+    cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
+    cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
+    cpanm --verbose Dist::Zilla::Plugin::Covenant                       && \
+    cpanm --verbose Dist::Zilla::Plugin::Test::PAUSE::Permissions       && \
+    cpanm --verbose Dist::Zilla::Plugin::CoderwallEndorse               && \
+    cpanm --verbose Dist::Zilla::Plugin::ReportVersions::Tiny           && \
+    cpanm --verbose Dist::Zilla::Plugin::PreviousVersion::Changelog     && \
+    cpanm --verbose Dist::Zilla::Plugin::HelpWanted           && \
+    cpanm --verbose Dist::Zilla::Plugin::ChangeStats::Git     && \
+    cpanm --verbose Dist::Zilla::Plugin::CoalescePod          && \
+    cpanm --verbose Dist::Zilla::PluginBundle::YANICK         && \
+    echo Dancer                                               && \
     cpanm --verbose Data::Censor                              && \
     cpanm --verbose Template::Tiny                            && \
     cpanm --verbose File::Share                               && \
