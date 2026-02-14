@@ -89,6 +89,24 @@ RUN echo start                                      && \
     cpanm --verbose Alien::Base::Wrapper                      && \
     cpanm --verbose Alien::Build::Plugin::Download::GitLab    && \
     cpanm --verbose Alien::Libxml2                            && \
+    echo Perl Weekly                                          && \
+    cpanm --verbose Data::ICal                                && \
+    cpanm --verbose Data::Printer                             && \
+    cpanm --verbose DateTime::Format::ICal                    && \
+    cpanm --verbose DateTime::Format::W3CDTF                  && \
+    cpanm --verbose DateTime::Functions                       && \
+    cpanm --verbose Email::SendGrid::V3                       && \
+    cpanm --verbose File::Serialize                           && \
+    cpanm --verbose Gravatar::URL                             && \
+    cpanm --verbose JSON::Path                                && \
+    cpanm --verbose MIME::Lite                                && \
+    cpanm --verbose PerlX::Maybe                              && \
+    cpanm --verbose Plack::Middleware::DirIndex               && \
+    cpanm --verbose URL::Encode                               && \
+    cpanm --verbose WWW::Mailman                              && \
+    cpanm --verbose WWW::Shorten::Bitly                       && \
+    cpanm --verbose XML::Feed                                 && \
+    cpanm --verbose XML::RSS                                  && \
     echo done
 
 
