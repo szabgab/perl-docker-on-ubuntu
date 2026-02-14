@@ -12,14 +12,9 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     echo added                                                && \
-    cpanm --verbose Data::Compare                             && \
-    cpanm --verbose Devel::CheckOS                            && \
-    cpanm --verbose Dist::Zilla::Plugin::AssertOS             && \
-    echo next                                                 && \
-    cpanm --verbose Dist::Zilla::Plugin::InstallRelease       && \
-    cpanm --verbose Dist::Zilla::Plugin::SchwartzRatio        && \
     cpanm --verbose RDF::DOAP::Lite                           && \
     cpanm --verbose Dist::Zilla::Plugin::DOAP                 && \
+    echo next                                                 && \
     cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
     cpanm --verbose Test::NoWarnings                          && \
