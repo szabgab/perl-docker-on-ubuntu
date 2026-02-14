@@ -12,8 +12,6 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     echo added                                                && \
-    cpanm --verbose RDF::DOAP::Lite                           && \
-    cpanm --verbose Dist::Zilla::Plugin::DOAP                 && \
     echo next                                                 && \
     cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
