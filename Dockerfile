@@ -6,6 +6,7 @@ RUN apt update                              && \
     apt install -y tree                     && \
     apt install -y less                     && \
     apt install -y libxml2-dev              && \
+    apt install -y libexpat1-dev            && \
     echo done
 
 # gpg-agent seems to be required by Config::Identity
@@ -105,8 +106,11 @@ RUN echo start                                      && \
     cpanm --verbose URL::Encode                               && \
     cpanm --verbose WWW::Mailman                              && \
     cpanm --verbose WWW::Shorten::Bitly                       && \
-    cpanm --verbose XML::Feed                                 && \
+    cpanm --verbose XML::Parser                               && \
+    cpanm --verbose XML::XPath                                && \
+    cpanm --verbose XML::Atom                                 && \
     cpanm --verbose XML::RSS                                  && \
+    cpanm --verbose XML::Feed                                 && \
     echo done
 
 
@@ -118,6 +122,8 @@ RUN echo start                                      && \
 
 # We install libxml2-dev so when installing Alien::Libxml2 it won't need to compile.
 # XML::LibXML
+
+# We install libexpat1-dev as it is needed by XML::Parser
 
 # Test::XPath
 # X11::GUITest
