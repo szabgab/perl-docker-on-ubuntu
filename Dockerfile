@@ -7,6 +7,8 @@ RUN apt update                              && \
     apt install -y less                     && \
     apt install -y libxml2-dev              && \
     apt install -y libexpat1-dev            && \
+    apt install -y pkg-config               && \
+    apt install -y libgd-dev                && \
     echo done
 
 # gpg-agent seems to be required by Config::Identity
@@ -111,8 +113,16 @@ RUN echo start                                      && \
     cpanm --verbose XML::Atom                                 && \
     cpanm --verbose XML::RSS                                  && \
     cpanm --verbose XML::Feed                                 && \
+    cpanm --verbose ExtUtils::PkgConfig                       && \
+    cpanm --verbose GD                                        && \
+    cpanm --verbose GD::Graph                                 && \
+    cpanm --verbose Math::Round                               && \
+    cpanm --verbose Text::CSV                                 && \
     echo done
 
+# pkg-config is needed by ExtUtils::PkgConfig
+
+# libgd-dev is needed by GD
 
 # Installing PkgConfig generates lots of warnings:
 # Ignoring unknown extended header keyword
