@@ -70,7 +70,6 @@ RUN echo start                                      && \
     cpanm --verbose Template                                  && \
     cpanm --verbose DateTime::Format::SQLite                  && \
     cpanm --verbose MooX::Types::MooseLike::Base              && \
-    cpanm --verbose Data::Random                              && \
     cpanm --verbose Test::ClassAPI                            && \
     cpanm --verbose Test::Inline                              && \
     cpanm --verbose CHI                                       && \
