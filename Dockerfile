@@ -36,6 +36,8 @@ RUN echo start                                      && \
     cpanm --verbose Dist::Zilla::Plugin::ChangeStats::Git     && \
     cpanm --verbose Dist::Zilla::Plugin::CoalescePod          && \
     cpanm --verbose Dist::Zilla::PluginBundle::YANICK         && \
+    cpanm --verbose PPIx::DocumentName                        && \
+    cpanm --verbose Dist::Zilla::Plugin::Readme::Brief        && \
     echo Dancer                                               && \
     cpanm --verbose Data::Censor                              && \
     cpanm --verbose Template::Tiny                            && \
