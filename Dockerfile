@@ -23,6 +23,9 @@ RUN echo start                                      && \
     cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
     echo next                                                 && \
+    cpanm --verbose Dist::Zilla::Plugin::InsertCopyright                && \
+    cpanm --verbose Dist::Zilla::Plugin::MakeMaker::Highlander          && \
+    cpanm --verbose Dist::Zilla::Plugin::OnlyCorePrereqs                && \
     cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
     cpanm --verbose Dist::Zilla::Plugin::VerifyPhases                   && \
