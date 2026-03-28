@@ -23,6 +23,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
     echo next                                                 && \
+    cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
     cpanm --verbose Dist::Zilla::Plugin::VerifyPhases                   && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
