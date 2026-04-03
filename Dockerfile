@@ -52,6 +52,7 @@ RUN echo start                                      && \
     cpanm --verbose Plack::Middleware::FixMissingBodyInRedirect && \
     cpanm --verbose Dancer2                                     && \
     echo maybe                                                && \
+    cpanm --verbose Devel::Mutator                            && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
     cpanm --verbose MooseX::Getopt                            && \
