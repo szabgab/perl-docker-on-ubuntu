@@ -124,6 +124,28 @@ RUN echo start                                      && \
     cpanm --verbose GD::Graph                                 && \
     cpanm --verbose Math::Round                               && \
     cpanm --verbose Text::CSV                                 && \
+    cpanm --verbose Test::XPath                               && \
+    cpanm --verbose Test::IsAny                               && \
+    cpanm --verbose Mock::Sub                                 && \
+    cpanm --verbose MetaCPAN::Client                          && \
+    cpanm --verbose TAP::Formatter::HTML                      && \
+    cpanm --verbose Test::BDD::Cucumber                       && \
+    cpanm --verbose IO::Tty                                   && \
+    cpanm --verbose Expect                                    && \
+    cpanm --verbose Expect::Simple                            && \
+    cpanm --verbose Test::Expect                              && \
+    cpanm --verbose Test::Snapshots                           && \
+    cpanm --vernose Net::Telnet                               && \
+    cpanm --vernose Net::FTP                                  && \
+    cpanm --vernose Net::SSH                                  && \
+    cpanm --verbose WebService::Validator::HTML::W3C          && \
+    cpanm --verbose Test::HTTP::LocalServer                   && \
+    cpanm --verbose Test::Base                                && \
+    cpanm --verbose Net::Server                               && \
+    cpanm --verbose Test::Simple                              && \
+    cpanm --verbose Test2::AsyncSubtest                       && \
+    cpanm --verbose CSS::Tiny                                 && \
+    cpanm --verbose PPI::HTML                                 && \
     echo done
 
 # pkg-config is needed by ExtUtils::PkgConfig
@@ -141,23 +163,15 @@ RUN echo start                                      && \
 
 # We install libexpat1-dev as it is needed by XML::Parser
 
-# Test::XPath
 # X11::GUITest
 # Fennec::Declare
 # WWW::Mechanize::PhantomJS
-# Test::Expect
-# PPI::HTML
 # HTML::Lint
-# Expect
 # Fennec
-# Net::Telnet
 # Selenium::Remote::Driver
-# Test::Snapshots
-# Net::Server
 # Net::SSH::Perl
 # Parallel::Iterator
-# Expect::Simple
-# TAP::Formatter::HTML
+# Parallel::ForkManager, Test2::AsyncSubtest, Sub::Attribute
 # Test::Class::Moose
 # WWW::Mechanize::Firefox
 # HTML::Tidy
