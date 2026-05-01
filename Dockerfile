@@ -22,6 +22,9 @@ RUN echo start                                      && \
     cpanm --verbose Git::Version::Compare                     && \
     cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
+    echo done
+
+RUN echo start                                      && \
     echo next                                                 && \
     cpanm --verbose Dist::Zilla::Plugin::InsertCopyright                && \
     cpanm --verbose Dist::Zilla::Plugin::MakeMaker::Highlander          && \
@@ -42,6 +45,9 @@ RUN echo start                                      && \
     cpanm --verbose Dist::Zilla::PluginBundle::YANICK         && \
     cpanm --verbose PPIx::DocumentName                        && \
     cpanm --verbose Dist::Zilla::Plugin::Readme::Brief        && \
+    echo done
+
+RUN echo start                                      && \
     echo Dancer                                               && \
     cpanm --verbose Data::Censor                              && \
     cpanm --verbose Template::Tiny                            && \
@@ -51,7 +57,10 @@ RUN echo start                                      && \
     cpanm --verbose Plack::Middleware::RemoveRedundantBody      && \
     cpanm --verbose Plack::Middleware::FixMissingBodyInRedirect && \
     cpanm --verbose Dancer2                                     && \
-    echo maybe                                                && \
+    echo done
+
+RUN echo start                                                && \
+    echo maybe part 1                                         && \
     cpanm --verbose Devel::Mutator                            && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
@@ -71,6 +80,10 @@ RUN echo start                                      && \
     cpanm --verbose Archive::Tar::Wrapper                     && \
     cpanm --verbose DBD::Mock                                 && \
     cpanm --verbose Devel::NYTProf                            && \
+    echo done
+
+RUN echo start                                                && \
+    echo maybe part 2                                         && \
     cpanm --verbose Test::WWW::Mechanize::PSGI                && \
     cpanm --verbose Test::LeakTrace                           && \
     cpanm --verbose AppConfig                                 && \
@@ -98,6 +111,9 @@ RUN echo start                                      && \
     cpanm --verbose Alien::Base::Wrapper                      && \
     cpanm --verbose Alien::Build::Plugin::Download::GitLab    && \
     cpanm --verbose Alien::Libxml2                            && \
+    echo done
+
+RUN echo start                                                && \
     echo Perl Weekly                                          && \
     cpanm --verbose Data::ICal                                && \
     cpanm --verbose Data::Printer                             && \
@@ -122,6 +138,10 @@ RUN echo start                                      && \
     cpanm --verbose ExtUtils::PkgConfig                       && \
     cpanm --verbose GD                                        && \
     cpanm --verbose GD::Graph                                 && \
+    echo done
+
+RUN echo start                                                && \
+    echo maybe part 3                                         && \
     cpanm --verbose Math::Round                               && \
     cpanm --verbose Text::CSV                                 && \
     cpanm --verbose Test::XPath                               && \
