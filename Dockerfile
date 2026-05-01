@@ -22,6 +22,7 @@ RUN echo start                                      && \
     cpanm --verbose Git::Version::Compare                     && \
     cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
+    cpanm --verbose YAML::XS                                  && \
     echo done
 
 RUN echo start                                      && \
