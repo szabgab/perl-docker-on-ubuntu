@@ -23,6 +23,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
     cpanm --verbose YAML::XS                                  && \
+    cpanm --verbose Test::Most                                && \
     echo done
 
 RUN echo start                                      && \
