@@ -1,6 +1,6 @@
 # Development
 
-## Manuall
+## Manually
 
 ```
 docker image rm perldocker/perl-tester:5.42
