@@ -18,7 +18,6 @@ RUN echo start                                      && \
     echo next                                                 && \
     cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
-    cpanm --verbose Test::NoWarnings                          && \
     cpanm --verbose Git::Version::Compare                     && \
     cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
@@ -26,14 +25,13 @@ RUN echo start                                      && \
     cpanm --verbose Test::Most                                && \
     echo done
 
+Test::PAUSE::Permissions
+
 RUN echo start                                      && \
     echo next                                                 && \
-    cpanm --verbose Dist::Zilla::Plugin::InsertCopyright                && \
-    cpanm --verbose Dist::Zilla::Plugin::MakeMaker::Highlander          && \
     cpanm --verbose Dist::Zilla::Plugin::OnlyCorePrereqs                && \
     cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
-    cpanm --verbose Dist::Zilla::Plugin::VerifyPhases                   && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
     cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
     cpanm --verbose Dist::Zilla::Plugin::Covenant                       && \

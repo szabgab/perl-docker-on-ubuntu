@@ -1,8 +1,0 @@
-Test::NoWarnings
-
-  Git::Version::Compare
-Test::Requires::Git
-
-Dist::Zilla::Plugin::InsertCopyright
-
-Dist::Zilla::Plugin::VerifyPhases
