@@ -25,8 +25,6 @@ RUN echo start                                      && \
     cpanm --verbose Test::Most                                && \
     echo done
 
-Test::PAUSE::Permissions
-
 RUN echo start                                      && \
     echo next                                                 && \
     cpanm --verbose Dist::Zilla::Plugin::OnlyCorePrereqs                && \
