@@ -20,7 +20,6 @@ RUN apt update                              && \
 RUN echo start                                      && \
     echo added                                                && \
     cpanm --verbose YAML::XS                                  && \
-    cpanm --verbose Test::Exception                           && \
     cpanm --verbose Test::Most                                && \
     echo next                                                 && \
     cpanm --verbose Test::Requires                            && \
@@ -38,7 +37,6 @@ RUN echo start                                      && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
     cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
     cpanm --verbose Dist::Zilla::Plugin::Covenant                       && \
-    cpanm --verbose Dist::Zilla::Plugin::Test::PAUSE::Permissions       && \
     cpanm --verbose Dist::Zilla::Plugin::CoderwallEndorse               && \
     cpanm --verbose Dist::Zilla::Plugin::ReportVersions::Tiny           && \
     cpanm --verbose Dist::Zilla::Plugin::PreviousVersion::Changelog     && \
