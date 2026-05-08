@@ -9,7 +9,11 @@ RUN apt update                              && \
     apt install -y libexpat1-dev            && \
     apt install -y pkg-config               && \
     apt install -y libgd-dev                && \
+    apt install -y libreadline-dev          && \
     echo done
+
+
+# libreadline-dev is needed Term::ReadLine::Gnu which is needed to allow history in the perl debugger.
 
 # gpg-agent seems to be required by Config::Identity
 
@@ -27,6 +31,7 @@ RUN echo start                                      && \
 
 RUN echo start                                      && \
     echo next                                                 && \
+    cpanm --verbose Term::ReadLine::Gnu                                 && \
     cpanm --verbose Dist::Zilla::Plugin::OnlyCorePrereqs                && \
     cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
