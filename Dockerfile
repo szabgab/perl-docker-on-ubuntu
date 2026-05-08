@@ -15,13 +15,14 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     echo added                                                && \
+    cpanm --verbose YAML::XS                                  && \
+    cpanm --verbose Test::Exception                           && \
+    cpanm --verbose Test::Most                                && \
     echo next                                                 && \
+    cpanm --verbose Test::Requires                            && \
     cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
-    cpanm --verbose Git::Version::Compare                     && \
     cpanm --verbose Git::Repository                           && \
-    cpanm --verbose YAML::XS                                  && \
-    cpanm --verbose Test::Most                                && \
     echo done
 
 RUN echo start                                      && \
@@ -143,6 +144,8 @@ RUN echo start                                                && \
     cpanm --verbose Text::CSV                                 && \
     cpanm --verbose Test::XPath                               && \
     cpanm --verbose Test::IsAny                               && \
+    cpanm --verbose Test::CheckDeps                           && \
+    cpanm --verbose Test::RedisServer                         && \
     cpanm --verbose Mock::Sub                                 && \
     cpanm --verbose MetaCPAN::Client                          && \
     cpanm --verbose TAP::Formatter::HTML                      && \
@@ -188,18 +191,16 @@ RUN echo start                                                && \
 # Selenium::Remote::Driver
 # Net::SSH::Perl
 # Parallel::Iterator
-# Parallel::ForkManager, Test2::AsyncSubtest, Sub::Attribute
+# Parallel::ForkManager
+# Test2::AsyncSubtest
+# Sub::Attribute
 # Test::Class::Moose
 # WWW::Mechanize::Firefox
 # HTML::Tidy
 # Test::HTML::Tidy
 # HTTP::Proxy
 # Net::SSH
-# Test::CheckDeps 0.010 not found.
-# Test::RedisServer 0.23 not found.
-# XML::Fast 0 not found.
-
-
+# XML::Fast
 # Test2
 
 # Path::Class::Iterator seem to fail in docker
