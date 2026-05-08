@@ -19,7 +19,6 @@ RUN echo start                                      && \
     cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
     cpanm --verbose Git::Version::Compare                     && \
-    cpanm --verbose Test::Requires::Git                       && \
     cpanm --verbose Git::Repository                           && \
     cpanm --verbose YAML::XS                                  && \
     cpanm --verbose Test::Most                                && \
@@ -196,6 +195,10 @@ RUN echo start                                                && \
 # Test::HTML::Tidy
 # HTTP::Proxy
 # Net::SSH
+# Test::CheckDeps 0.010 not found.
+# Test::RedisServer 0.23 not found.
+# XML::Fast 0 not found.
+
 
 # Test2
 
