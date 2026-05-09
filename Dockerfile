@@ -21,6 +21,7 @@ RUN echo start                                      && \
     echo added                                                && \
     cpanm --verbose YAML::XS                                  && \
     cpanm --verbose Test::Warn                                && \
+    cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     echo next                                                 && \
     cpanm --verbose Test::Most                                && \
     cpanm --verbose Test::Requires                            && \
@@ -39,8 +40,6 @@ RUN echo start                                      && \
 RUN echo start                                      && \
     echo next                                                 && \
     cpanm --verbose Term::ReadLine::Gnu                                 && \
-    cpanm --verbose Dist::Zilla::Plugin::OnlyCorePrereqs                && \
-    cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
     cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
