@@ -20,8 +20,9 @@ RUN apt update                              && \
 RUN echo start                                      && \
     echo added                                                && \
     cpanm --verbose YAML::XS                                  && \
-    cpanm --verbose Test::Most                                && \
+    cpanm --verbose Test::Warn                                && \
     echo next                                                 && \
+    cpanm --verbose Test::Most                                && \
     cpanm --verbose Test::Requires                            && \
     cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
