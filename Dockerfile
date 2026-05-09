@@ -29,6 +29,13 @@ RUN echo start                                      && \
     cpanm --verbose Git::Repository                           && \
     echo done
 
+# HTML::Tidy needs tidyp.h that can be installed using the Alien::Tidyp module
+RUN echo start                                      && \
+    cpanm --verbose Alien::Tidyp                             && \
+    cpanm --verbose HTML::Tidy                               && \
+    cpanm --verbose Test::HTML::Tidy                         && \
+    echo done
+
 RUN echo start                                      && \
     echo next                                                 && \
     cpanm --verbose Term::ReadLine::Gnu                                 && \
@@ -200,8 +207,6 @@ RUN echo start                                                && \
 # Sub::Attribute
 # Test::Class::Moose
 # WWW::Mechanize::Firefox
-# HTML::Tidy
-# Test::HTML::Tidy
 # HTTP::Proxy
 # Net::SSH
 # XML::Fast
