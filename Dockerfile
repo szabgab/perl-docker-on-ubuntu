@@ -19,9 +19,7 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     echo added                                                && \
-    cpanm --verbose YAML::XS                                  && \
     cpanm --verbose Test::Warn                                && \
-    cpanm --verbose Dist::Zilla::Plugin::CopyFilesFromBuild::Filtered   && \
     echo next                                                 && \
     cpanm --verbose Test::Most                                && \
     cpanm --verbose Test::Requires                            && \
