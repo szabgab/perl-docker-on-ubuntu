@@ -171,6 +171,7 @@ RUN echo start                                                && \
     cpanm --verbose Test2::AsyncSubtest                       && \
     cpanm --verbose CSS::Tiny                                 && \
     cpanm --verbose PPI::HTML                                 && \
+    cpanm --verbose Mock::Config                              && \
     echo done
 
 # pkg-config is needed by ExtUtils::PkgConfig
