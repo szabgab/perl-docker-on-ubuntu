@@ -20,10 +20,11 @@ RUN apt update                              && \
 RUN echo start                                      && \
     echo added                                                && \
     cpanm --verbose Test::Warn                                && \
+    cpanm --verbose Test::Requires                            && \
+    cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
     echo next                                                 && \
     cpanm --verbose Test::Most                                && \
-    cpanm --verbose Test::Requires                            && \
-    cpanm --verbose Perl::Version                             && \
+    #cpanm --verbose Perl::Version                             && \
     cpanm --verbose System::Command                           && \
     cpanm --verbose Git::Repository                           && \
     echo done
@@ -38,7 +39,6 @@ RUN echo start                                      && \
 RUN echo start                                      && \
     echo next                                                 && \
     cpanm --verbose Term::ReadLine::Gnu                                 && \
-    cpanm --verbose Dist::Zilla::Plugin::NextVersion::Semantic          && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
     cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
     cpanm --verbose Dist::Zilla::Plugin::Covenant                       && \
