@@ -22,6 +22,7 @@ RUN echo start                                      && \
     cpanm --verbose Test::Requires                            && \
     cpanm --verbose Test::Most                                && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
+    cpanm --verbose Dist::Zilla::Plugin::ReportVersions::Tiny           && \
     echo next                                                 && \
     cpanm --verbose System::Command                           && \
     cpanm --verbose Git::Repository                           && \
@@ -40,8 +41,6 @@ RUN echo start                                      && \
     cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
     cpanm --verbose Dist::Zilla::Plugin::Covenant                       && \
     cpanm --verbose Dist::Zilla::Plugin::CoderwallEndorse               && \
-    cpanm --verbose Dist::Zilla::Plugin::ReportVersions::Tiny           && \
-    cpanm --verbose Dist::Zilla::Plugin::PreviousVersion::Changelog     && \
     cpanm --verbose Dist::Zilla::Plugin::HelpWanted           && \
     cpanm --verbose Dist::Zilla::Plugin::ChangeStats::Git     && \
     cpanm --verbose Dist::Zilla::Plugin::CoalescePod          && \
@@ -49,6 +48,7 @@ RUN echo start                                      && \
     cpanm --verbose PPIx::DocumentName                        && \
     cpanm --verbose Dist::Zilla::Plugin::Readme::Brief        && \
     echo done
+#    cpanm --verbose Dist::Zilla::Plugin::PreviousVersion::Changelog     && \
 
 RUN echo start                                      && \
     echo Dancer                                               && \
