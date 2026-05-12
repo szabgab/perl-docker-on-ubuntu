@@ -23,9 +23,6 @@ RUN echo start                                      && \
     cpanm --verbose Test::Most                                && \
     cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
     cpanm --verbose Dist::Zilla::Plugin::ReportVersions::Tiny           && \
-    echo next                                                 && \
-    cpanm --verbose System::Command                           && \
-    cpanm --verbose Git::Repository                           && \
     echo done
 
 # HTML::Tidy needs tidyp.h that can be installed using the Alien::Tidyp module
@@ -47,6 +44,11 @@ RUN echo start                                      && \
     cpanm --verbose Dist::Zilla::PluginBundle::YANICK         && \
     cpanm --verbose PPIx::DocumentName                        && \
     cpanm --verbose Dist::Zilla::Plugin::Readme::Brief        && \
+    cpanm --verbose Test::Lib                                 && \
+    cpanm --verbose Test::WWW::Mechanize::PSGI                && \
+    cpanm --verbose Test::LeakTrace                           && \
+    cpanm --verbose Test::ClassAPI                            && \
+    cpanm --verbose Test::Inline                              && \
     echo done
 #    cpanm --verbose Dist::Zilla::Plugin::PreviousVersion::Changelog     && \
 
@@ -55,7 +57,6 @@ RUN echo start                                      && \
     cpanm --verbose Data::Censor                              && \
     cpanm --verbose Template::Tiny                            && \
     cpanm --verbose File::Share                               && \
-    cpanm --verbose Test::Lib                                 && \
     cpanm --verbose CLI::Osprey                               && \
     cpanm --verbose Plack::Middleware::RemoveRedundantBody      && \
     cpanm --verbose Plack::Middleware::FixMissingBodyInRedirect && \
@@ -64,6 +65,8 @@ RUN echo start                                      && \
 
 RUN echo start                                                && \
     echo maybe part 1                                         && \
+    cpanm --verbose System::Command                           && \
+    cpanm --verbose Git::Repository                           && \
     cpanm --verbose Devel::Mutator                            && \
     cpanm --verbose Hash::Merge                               && \
     cpanm --verbose MooseX::Storage                           && \
@@ -87,14 +90,10 @@ RUN echo start                                                && \
 
 RUN echo start                                                && \
     echo maybe part 2                                         && \
-    cpanm --verbose Test::WWW::Mechanize::PSGI                && \
-    cpanm --verbose Test::LeakTrace                           && \
     cpanm --verbose AppConfig                                 && \
     cpanm --verbose Template                                  && \
     cpanm --verbose DateTime::Format::SQLite                  && \
     cpanm --verbose MooX::Types::MooseLike::Base              && \
-    cpanm --verbose Test::ClassAPI                            && \
-    cpanm --verbose Test::Inline                              && \
     cpanm --verbose CHI                                       && \
     cpanm --verbose DBIx::Class                               && \
     cpanm --verbose DBIx::Class::InflateColumn::Serializer    && \
