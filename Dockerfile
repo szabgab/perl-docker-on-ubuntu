@@ -174,6 +174,19 @@ RUN echo start                                                && \
     cpanm --verbose Mock::Config                              && \
     echo done
 
+RUN echo start                                                && \
+    echo maybe part 4                                         && \
+    cpanm --verbose Parallel::Iterator                        && \
+    cpanm --verbose Parallel::ForkManager                     && \
+    cpanm --verbose HTTP::Proxy                               && \
+    cpanm --verbose Sub::Attribute                            && \
+    cpanm --verbose Test::Class::Moose                        && \
+    cpanm --verbose Test2::AsyncSubtest                       && \
+    cpanm --verbose --notest Path::Class::Iterator            && \
+    echo done
+
+# Path::Class::Iterator seem to fail in docker
+
 # pkg-config is needed by ExtUtils::PkgConfig
 
 # libgd-dev is needed by GD
@@ -192,23 +205,13 @@ RUN echo start                                                && \
 # X11::GUITest
 # Fennec::Declare
 # WWW::Mechanize::PhantomJS
-# HTML::Lint
 # Fennec
 # Selenium::Remote::Driver
 # Net::SSH::Perl
-# Parallel::Iterator
-# Parallel::ForkManager
-# Test2::AsyncSubtest
-# Sub::Attribute
-# Test::Class::Moose
 # WWW::Mechanize::Firefox
-# HTTP::Proxy
 # Net::SSH
 # XML::Fast
 # Test2
-
-# Path::Class::Iterator seem to fail in docker
-# cpanm --verbose --notest Path::Class::Iterator            && \
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
