@@ -19,8 +19,6 @@ RUN apt update                              && \
 
 RUN echo start                                      && \
     echo added                                                && \
-    cpanm --verbose Test::Most                                && \
-    cpanm --verbose Dist::Zilla::Plugin::CopyrightYearFromGit           && \
     echo done
 
 # HTML::Tidy needs tidyp.h that can be installed using the Alien::Tidyp module
