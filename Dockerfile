@@ -210,6 +210,10 @@ RUN echo start                                                && \
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
+RUN echo Install Antigravity   && \
+    curl -fsSL https://antigravity.google/cli/install.sh | bash  && \
+    echo done
+
 COPY bashrc /home/ubuntu/.bashrc
 RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
 
