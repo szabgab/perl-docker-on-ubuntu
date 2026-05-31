@@ -17,9 +17,9 @@ RUN apt update                              && \
 
 # gpg-agent seems to be required by Config::Identity
 
-RUN echo start                                      && \
-    echo added                                                && \
-    echo done
+# RUN echo start                                      && \
+#     echo added                                                && \
+#     echo done
 
 # HTML::Tidy needs tidyp.h that can be installed using the Alien::Tidyp module
 RUN echo start                                      && \
