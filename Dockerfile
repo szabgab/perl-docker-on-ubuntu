@@ -10,6 +10,7 @@ RUN apt update                              && \
     apt install -y pkg-config               && \
     apt install -y libgd-dev                && \
     apt install -y libreadline-dev          && \
+    apt install -y gawk                     && \
     echo done
 
 
@@ -210,9 +211,19 @@ RUN echo start                                                && \
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
+# gawk was needed due to a bug
+RUN echo Install Codex   && \
+    curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 sh && \
+    echo done
+
 RUN echo Install Antigravity   && \
     curl -fsSL https://antigravity.google/cli/install.sh | bash  && \
     echo done
+
+RUN echo Install GitHub co-pilot CLI   && \
+    curl -fsSL https://gh.io/copilot-install | bash  && \
+    echo done
+
 
 COPY bashrc /home/ubuntu/.bashrc
 RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
