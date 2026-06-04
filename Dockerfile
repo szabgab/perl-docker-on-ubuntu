@@ -211,6 +211,9 @@ RUN echo start                                                && \
 
 RUN adduser --disabled-password --gecos "" ubuntu
 
+WORKDIR /home/ubuntu
+USER ubuntu
+
 # gawk was needed due to a bug
 RUN echo Install Codex   && \
     curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 sh && \
@@ -224,9 +227,9 @@ RUN echo Install GitHub co-pilot CLI   && \
     curl -fsSL https://gh.io/copilot-install | bash  && \
     echo done
 
-
 COPY bashrc /home/ubuntu/.bashrc
-RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
+#RUN chown ubuntu:ubuntu /home/ubuntu/.bashrc
 
+USER root
 WORKDIR /opt
 

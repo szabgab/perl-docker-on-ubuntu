@@ -116,7 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH="/home/ubuntu/.local/bin:$PATH"
+
 eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 
 
-export PATH="/home/ubuntu/.local/bin:$PATH"
