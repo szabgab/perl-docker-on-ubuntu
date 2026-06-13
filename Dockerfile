@@ -11,6 +11,7 @@ RUN apt update                              && \
     apt install -y libgd-dev                && \
     apt install -y libreadline-dev          && \
     apt install -y gawk                     && \
+    apt install -y unzip                    && \
     echo done
 
 
