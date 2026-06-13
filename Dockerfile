@@ -32,6 +32,7 @@ RUN echo start                                      && \
 
 RUN echo start                                      && \
     echo next                                                 && \
+    cpanm --verbose JSON::Any                                           && \
     cpanm --verbose Term::ReadLine::Gnu                                 && \
     cpanm --verbose Dist::Zilla::Plugin::MatchManifest                  && \
     cpanm --verbose Dist::Zilla::Plugin::Covenant                       && \
